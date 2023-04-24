@@ -104,9 +104,7 @@ Fixed Fixed::operator-(const Fixed &fixed) const
 
 Fixed Fixed::operator*(const Fixed &fixed) const
 {
-	Fixed tmp;
-
-	tmp.setRawBits((m_fixed * fixed.getRawBits()) >> m_fixed_bits);
+	Fixed tmp(this->toFloat() * fixed.toFloat());
 	return (tmp);
 }
 

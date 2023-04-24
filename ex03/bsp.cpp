@@ -9,7 +9,7 @@ bool bsp( Point const a, Point const b, Point const c, Point const point)
 {
 	bool b1, b2, b3;
 
-	if (sign(point, a, b) == 0.0f && sign(point, b, c) == 0.0f && sign(point, c, a) == 0.0f)
+	if (sign(point, a, b) == 0.0f || sign(point, b, c) == 0.0f || sign(point, c, a) == 0.0f)
 		return (false);
    b1 = sign(point, a, b) < 0.0f;
    b2 = sign(point, b, c) < 0.0f;
